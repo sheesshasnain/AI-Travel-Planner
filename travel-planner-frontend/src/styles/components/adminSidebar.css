@@ -1,0 +1,49 @@
+.admin-sidebar {
+  width: 280px;
+  min-height: 100vh;
+  padding: 28px;
+  background: linear-gradient(180deg, #111827, #020617);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.admin-brand span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.admin-brand h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.admin-sidebar nav {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-sidebar button {
+  border: none;
+  padding: 14px 16px;
+  border-radius: 16px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+}
+
+.admin-sidebar button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}

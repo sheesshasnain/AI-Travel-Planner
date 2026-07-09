@@ -1,0 +1,560 @@
+
+/* =========================================================
+   Trip Detail Refined UI
+   Put this file at: src/styles/pages/tripDetail.css
+   Import in TripDetail.jsx:
+   import "../styles/pages/tripDetail.css";
+   ========================================================= */
+
+.trip-detail-main {
+  max-width: 1420px;
+  padding-top: 42px;
+}
+
+/* ---------- Hero ---------- */
+
+.trip-hero {
+  position: relative;
+  height: 460px;
+  border-radius: 38px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid rgba(201, 164, 92, 0.34);
+  box-shadow: 0 38px 110px rgba(0, 0, 0, 0.58);
+  background: rgba(18, 24, 33, 0.78);
+}
+
+.trip-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(201, 164, 92, 0.28), transparent 30%),
+    linear-gradient(90deg, rgba(5, 8, 12, 0.92), rgba(5, 8, 12, 0.38), rgba(5, 8, 12, 0.12)),
+    linear-gradient(to top, rgba(5, 8, 12, 0.92), transparent 55%);
+  pointer-events: none;
+}
+
+.trip-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.trip-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.trip-hero-overlay h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.95;
+  margin: 12px 0 12px;
+  font-family: Georgia, serif;
+  letter-spacing: -1.5px;
+  color: #f5f1e8;
+  text-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
+}
+
+.trip-hero-overlay p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 18px;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.route-separator {
+  color: #c9a45c;
+  margin: 0 10px;
+  font-weight: 900;
+}
+
+/* ---------- Journey Stats ---------- */
+
+.trip-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.trip-info-grid .profile-stat {
+  position: relative;
+  overflow: hidden;
+  min-height: 118px;
+  padding: 22px;
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(18, 24, 33, 0.86), rgba(11, 15, 20, 0.72));
+  border: 1px solid rgba(201, 164, 92, 0.22);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.3);
+}
+
+.trip-info-grid .profile-stat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(201, 164, 92, 0.16), transparent 36%);
+  pointer-events: none;
+}
+
+.trip-info-grid .profile-stat span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: #aeb5c2;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  margin-bottom: 10px;
+}
+
+.trip-info-grid .profile-stat strong {
+  position: relative;
+  z-index: 1;
+  color: #f5f1e8;
+  font-size: 21px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Shared Premium Sections ---------- */
+
+.premium-section,
+.weather-card,
+.itinerary-card,
+.day-card {
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(18, 24, 33, 0.88), rgba(11, 15, 20, 0.78));
+  border: 1px solid rgba(201, 164, 92, 0.24);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(20px);
+}
+
+.premium-section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  margin: 8px 0 0;
+  color: #c9a45c;
+  font-size: 34px;
+  line-height: 1.1;
+  font-family: Georgia, serif;
+}
+
+/* ---------- Weather ---------- */
+
+.weather-card {
+  padding: 34px;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.weather-item {
+  min-height: 118px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(201, 164, 92, 0.17);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather-item span {
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.weather-item strong {
+  color: #f5f1e8;
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.forecast-card {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(201, 164, 92, 0.16);
+  display: grid;
+  gap: 12px;
+  min-height: 150px;
+}
+
+.forecast-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(201, 164, 92, 0.14), transparent 42%);
+  pointer-events: none;
+}
+
+.forecast-icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(201, 164, 92, 0.14);
+  border: 1px solid rgba(201, 164, 92, 0.2);
+  font-size: 23px;
+}
+
+.forecast-card h4 {
+  position: relative;
+  margin: 0;
+  color: #c9a45c;
+  font-size: 17px;
+}
+
+.forecast-card p {
+  position: relative;
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.forecast-card strong {
+  position: relative;
+  color: #f5f1e8;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* ---------- Interests / Chips ---------- */
+
+.preview-chips,
+.trip-interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preview-chips span,
+.trip-interest-chips span {
+  padding: 9px 15px;
+  border-radius: 999px;
+  background: rgba(201, 164, 92, 0.15);
+  color: #f7d27c;
+  border: 1px solid rgba(201, 164, 92, 0.22);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ---------- Itinerary ---------- */
+
+.itinerary-card {
+  padding: 34px;
+  margin-bottom: 28px;
+}
+
+.itinerary-card > p {
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.day-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.day-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(201, 164, 92, 0.12), transparent 36%);
+  pointer-events: none;
+}
+
+.day-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: rgba(201, 164, 92, 0.16);
+  border: 1px solid rgba(201, 164, 92, 0.34);
+  color: #f7d27c;
+  font-weight: 900;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 18px 0 18px 24px;
+  border-left: 2px solid rgba(201, 164, 92, 0.28);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background: #c9a45c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(201, 164, 92, 0.12);
+}
+
+.timeline-item span {
+  color: #c9a45c;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.timeline-item p {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin: 7px 0 0;
+}
+
+.detail-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.mini-info-card h2 {
+  font-size: 28px;
+}
+
+.mini-info-card p {
+  color: #d1d5db;
+  line-height: 1.7;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.1);
+}
+
+.mini-info-card p:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Budget ---------- */
+
+.budget-list {
+  display: grid;
+  gap: 14px;
+}
+
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(201, 164, 92, 0.16);
+}
+
+.budget-row span {
+  color: #d1d5db;
+}
+
+.budget-row strong {
+  color: #f5f1e8;
+  text-align: right;
+}
+
+/* ---------- Light Mode ---------- */
+
+body.light .premium-section,
+body.light .weather-card,
+body.light .itinerary-card,
+body.light .day-card,
+body.light .trip-info-grid .profile-stat {
+  background: rgba(255, 250, 240, 0.86);
+  border-color: rgba(139, 111, 52, 0.24);
+  box-shadow: 0 24px 65px rgba(70, 55, 25, 0.14);
+}
+
+body.light .trip-hero::after {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(139, 111, 52, 0.18), transparent 30%),
+    linear-gradient(90deg, rgba(255, 250, 240, 0.84), rgba(255, 250, 240, 0.38), rgba(255, 250, 240, 0.04)),
+    linear-gradient(to top, rgba(255, 250, 240, 0.92), transparent 55%);
+}
+
+body.light .trip-hero-overlay h1,
+body.light .trip-info-grid .profile-stat strong,
+body.light .weather-item strong,
+body.light .forecast-card strong,
+body.light .budget-row strong {
+  color: #1f2933;
+}
+
+body.light .trip-hero-overlay p,
+body.light .itinerary-card > p,
+body.light .timeline-item p,
+body.light .mini-info-card p,
+body.light .budget-row span {
+  color: #4b5563;
+}
+
+body.light .weather-item,
+body.light .forecast-card,
+body.light .budget-row {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(139, 111, 52, 0.18);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1150px) {
+  .trip-info-grid,
+  .weather-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .trip-detail-main {
+    padding: 24px;
+  }
+
+  .trip-hero {
+    height: 340px;
+    border-radius: 28px;
+  }
+
+  .trip-hero-overlay {
+    padding: 30px;
+  }
+
+  .trip-info-grid,
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-card,
+  .itinerary-card,
+  .day-card {
+    padding: 24px;
+  }
+
+  .budget-row {
+    flex-direction: column;
+  }
+
+  .budget-row strong {
+    text-align: left;
+  }
+}
+.journey-overview-card {
+  padding: 34px;
+}
+
+.journey-route {
+  margin-top: 18px;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(11, 15, 20, 0.55);
+  border: 1px solid rgba(201, 164, 92, 0.18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journey-route span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9ca3af;
+}
+
+.journey-route h3 {
+  margin: 0;
+  font-size: 28px;
+  color: #f5f1e8;
+  font-family: Georgia, serif;
+}
+
+.journey-arrow {
+  font-size: 42px;
+  color: #c9a45c;
+  font-weight: 900;
+}
+
+.journey-trip-type {
+  margin: 24px 0;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: rgba(201, 164, 92, 0.1);
+  border: 1px solid rgba(201, 164, 92, 0.28);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #f5f1e8;
+}
+
+.journey-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.journey-pill {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 164, 92, 0.18);
+  font-weight: 700;
+  color: #f5f1e8;
+}.export-actions {
+  margin: 28px 0 34px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.export-pdf-btn {
+  margin-bottom: 10px;
+}

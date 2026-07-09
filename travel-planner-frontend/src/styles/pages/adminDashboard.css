@@ -1,0 +1,147 @@
+.admin-main {
+  padding: 36px;
+}
+
+.admin-hero {
+  padding: 34px;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-bottom: 28px;
+}
+
+.admin-label {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.admin-hero h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.admin-hero p {
+  margin-top: 10px;
+  opacity: 0.78;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.admin-stat-card,
+.admin-card {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  color: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.admin-stat-card {
+  padding: 24px;
+}
+
+.admin-stat-card span {
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.admin-stat-card strong {
+  font-size: 34px;
+}
+
+.admin-card {
+  padding: 24px;
+  margin-bottom: 26px;
+}
+
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.admin-section-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.admin-section-header span {
+  opacity: 0.7;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.admin-table th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.admin-table td {
+  font-size: 14px;
+}
+
+.admin-danger-btn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 65, 65, 0.18);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 90, 90, 0.35);
+}
+
+.admin-danger-btn:hover {
+  background: rgba(255, 65, 65, 0.32);
+}
+
+.admin-loading {
+  color: white;
+  padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 20px;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-hero h1 {
+    font-size: 30px;
+  }
+}

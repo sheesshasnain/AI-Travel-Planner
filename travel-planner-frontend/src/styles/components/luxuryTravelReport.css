@@ -1,0 +1,568 @@
+.luxury-report-hidden {
+  position: fixed;
+  left: -99999px;
+  top: 0;
+  width: 720px;
+  background: white;
+  z-index: -1;
+}
+
+.luxury-report {
+  width: 720px;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.luxury-report * {
+  box-sizing: border-box;
+  color: #1f2937;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.luxury-page-cover,
+.luxury-report-page,
+.luxury-thankyou-page {
+  width: 720px;
+  min-height: 980px;
+  background: #fff;
+  page-break-before: always;
+  break-before: page;
+  page-break-after: auto;
+  break-after: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-page-cover {
+  page-break-before: auto;
+  break-before: auto;
+  padding: 42px;
+  background: #ffffff;
+}
+
+.luxury-cover-image {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.luxury-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.luxury-cover-overlay {
+  display: none;
+}
+
+.luxury-cover-content {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 2;
+  padding-top: 36px;
+}
+
+.luxury-cover-content,
+.luxury-cover-content * {
+  color: #111827;
+}
+
+.luxury-small-title {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 12px;
+  color: #d4af37 !important;
+  font-weight: 800;
+}
+
+.luxury-cover-content h1,
+.luxury-thankyou-page h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.luxury-cover-subtitle {
+  margin: 16px 0 30px;
+  font-size: 20px;
+  color: #374151 !important;
+}
+
+.luxury-cover-route {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border: 1px solid rgba(212, 175, 55, 0.8);
+  border-radius: 999px;
+  background: #fafaf9;
+  margin-bottom: 16px;
+}
+
+.luxury-cover-date {
+  margin: 0 0 42px;
+  font-size: 15px;
+  color: #6b7280 !important;
+}
+
+.luxury-prepared {
+  display: grid;
+  gap: 5px;
+  border-left: 3px solid #d4af37;
+  padding-left: 16px;
+}
+
+.luxury-prepared span,
+.luxury-prepared small {
+  color: #6b7280 !important;
+}
+
+.luxury-prepared strong {
+  font-size: 22px;
+}
+
+.luxury-report-page {
+  padding: 42px 46px 62px;
+}
+
+.luxury-page-header {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+}
+
+.luxury-page-header > span {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #111827;
+  color: #d4af37;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  flex: 0 0 auto;
+}
+
+.luxury-page-header p {
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.luxury-page-header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 39px;
+  line-height: 1;
+}
+
+.luxury-page-header strong {
+  display: block;
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.luxury-page-footer {
+  position: absolute;
+  left: 46px;
+  right: 46px;
+  bottom: 28px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.luxury-page-footer span,
+.luxury-page-footer b {
+  color: #6b7280;
+}
+
+.luxury-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.luxury-section-kicker {
+  margin: 0 0 10px;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.luxury-two-column h2,
+.luxury-day-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+.luxury-paragraph {
+  line-height: 1.75;
+  margin: 0;
+  color: #374151;
+}
+
+.luxury-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.luxury-stat {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.luxury-stat span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.luxury-stat strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.luxury-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.luxury-tags span {
+  border: 1px solid #d4af37;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+  color: #111827;
+}
+
+.luxury-budget-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.luxury-budget-hero div {
+  padding: 22px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.luxury-budget-hero div:last-child {
+  border-right: none;
+}
+
+.luxury-budget-hero span {
+  display: block;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.luxury-budget-hero strong {
+  font-size: 20px;
+}
+
+.luxury-note,
+.luxury-footnote {
+  margin-top: 20px;
+  padding: 18px;
+  border-left: 3px solid #d4af37;
+  background: #fafaf9;
+  line-height: 1.6;
+}
+
+.luxury-route-panel {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.luxury-location {
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.luxury-location span {
+  display: block;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.luxury-location strong {
+  font-size: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.luxury-route-line {
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #d4af37;
+  display: grid;
+  place-items: center;
+  color: #d4af37;
+  font-size: 28px;
+}
+
+.luxury-weather-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.luxury-weather-main {
+  border-radius: 28px;
+  background: #111827;
+  padding: 34px;
+}
+
+.luxury-weather-main,
+.luxury-weather-main * {
+  color: white;
+}
+
+.luxury-weather-main span {
+  font-size: 54px;
+}
+
+.luxury-weather-main strong {
+  display: block;
+  font-size: 48px;
+  margin: 10px 0;
+  color: #d4af37 !important;
+}
+
+.luxury-weather-main p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.luxury-weather-side {
+  display: grid;
+  gap: 12px;
+}
+
+.luxury-forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.luxury-forecast-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.luxury-forecast-item strong,
+.luxury-forecast-item span {
+  display: block;
+}
+
+.luxury-forecast-item span {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.luxury-forecast-item p {
+  margin: 8px 0 0;
+  line-height: 1.45;
+  font-size: 12px;
+}
+
+.luxury-day-intro {
+  margin-bottom: 24px;
+}
+
+.luxury-day-intro span {
+  color: #d4af37;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.luxury-timeline {
+  display: grid;
+  gap: 18px;
+  border-left: 2px solid #d4af37;
+  padding-left: 22px;
+}
+
+.luxury-timeline-item {
+  position: relative;
+}
+
+.luxury-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: #d4af37;
+  border-radius: 50%;
+}
+
+.luxury-timeline-item span {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.luxury-timeline-item p {
+  margin: 5px 0 0;
+  line-height: 1.65;
+}
+
+.luxury-day-cost {
+  margin-top: 28px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.luxury-day-cost span {
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.luxury-recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.luxury-list {
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.luxury-list h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.luxury-list p {
+  margin: 8px 0;
+  line-height: 1.45;
+}
+
+.luxury-invoice {
+  border-top: 1px solid #111827;
+}
+
+.luxury-budget-row,
+.luxury-invoice-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.luxury-budget-row span,
+.luxury-invoice-total span {
+  color: #6b7280;
+}
+
+.luxury-invoice-total {
+  margin-top: 12px;
+  border-bottom: none;
+  border-top: 2px solid #d4af37;
+  padding-top: 22px;
+}
+
+.luxury-invoice-total strong {
+  font-size: 25px;
+  color: #111827;
+}
+
+.luxury-thankyou-page {
+  display: grid;
+  place-items: center;
+  padding: 70px;
+  text-align: center;
+  background: #111827;
+}
+
+.luxury-thankyou-page,
+.luxury-thankyou-page * {
+  color: white;
+}
+
+.luxury-thankyou-page p {
+  max-width: 460px;
+  line-height: 1.7;
+  color: #6b7280 !important;
+  margin: 20px auto;
+}
+
+.luxury-thankyou-page span {
+  color: #d4af37 !important;
+}
+
+
+.luxury-thankyou-page {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.luxury-report-page main {
+  max-height: none;
+}
+
+.luxury-budget-row strong,
+.luxury-invoice-total strong,
+.luxury-stat strong {
+  overflow-wrap: anywhere;
+}

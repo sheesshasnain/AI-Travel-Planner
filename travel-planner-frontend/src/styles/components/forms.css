@@ -1,0 +1,52 @@
+/* Premium date inputs */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color-scheme: dark;
+
+  height: 52px;
+  padding: 14px 46px 14px 16px;
+
+  background:
+    linear-gradient(rgba(11, 15, 20, 0.9), rgba(11, 15, 20, 0.9)),
+    radial-gradient(circle at top left, rgba(201, 164, 92, 0.14), transparent 40%);
+
+  color: #f5f1e8;
+  border: 1px solid rgba(201, 164, 92, 0.28);
+  border-radius: 16px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+}
+
+input[type="date"]:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 4px rgba(201, 164, 92, 0.14);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: rgba(201, 164, 92, 0.18);
+  filter: invert(75%) sepia(40%) saturate(520%) hue-rotate(3deg);
+  opacity: 1;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background-color: rgba(201, 164, 92, 0.32);
+}
+
+/* Champagne mode */
+body.light input[type="date"] {
+  color-scheme: light;
+  background: rgba(255, 255, 255, 0.86);
+  color: #1f2933;
+  border-color: rgba(139, 111, 52, 0.28);
+}
+
+body.light input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: rgba(139, 111, 52, 0.12);
+  filter: sepia(60%) saturate(500%) hue-rotate(3deg);
+}

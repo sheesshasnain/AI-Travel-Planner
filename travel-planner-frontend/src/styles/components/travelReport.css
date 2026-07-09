@@ -1,0 +1,465 @@
+.travel-report-hidden {
+  position: fixed;
+  left: -99999px;
+  top: 0;
+  width: 794px;
+  background: #ffffff;
+  z-index: -1;
+}
+
+.travel-report {
+  width: 794px;
+  min-height: 1123px;
+  background: #ffffff;
+  color: #172033;
+  font-family: Inter, Arial, sans-serif;
+  padding: 34px;
+  box-sizing: border-box;
+}
+
+.travel-report * {
+  box-sizing: border-box;
+  color: #172033;
+}
+
+.report-cover {
+  min-height: 520px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+  margin-bottom: 34px;
+}
+
+.report-cover-image {
+  position: absolute;
+  inset: 0;
+}
+
+.report-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.report-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.9));
+}
+
+.report-cover-content {
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  bottom: 42px;
+  z-index: 2;
+}
+
+.report-cover-content,
+.report-cover-content * {
+  color: white;
+}
+
+.report-kicker {
+  margin: 0 0 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.report-cover h1 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1;
+}
+
+.report-subtitle {
+  margin: 12px 0 28px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.report-route {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  margin-bottom: 12px;
+}
+
+.report-date {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.88;
+}
+
+.report-section {
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+}
+
+
+
+.report-section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.report-section-title span {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: #172033;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.report-section-title h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.report-stat {
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.report-stat span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.report-stat strong {
+  font-size: 15px;
+  color: #111827;
+  line-height: 1.35;
+}
+
+.report-summary-box,
+.report-note {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+}
+
+.report-summary-box h3 {
+  margin: 0 0 8px;
+}
+
+.report-summary-box p,
+.report-note {
+  line-height: 1.6;
+}
+
+.report-forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+  margin-top: 14px;
+}
+
+.report-forecast-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.report-forecast-card strong,
+.report-forecast-card span {
+  display: block;
+}
+
+.report-forecast-card span {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.report-forecast-card p {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.report-days {
+  display: grid;
+  gap: 16px;
+}
+
+.report-day-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  page-break-inside: avoid;
+}
+
+.report-day-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.report-day-header span {
+  background: #172033;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.report-day-header strong {
+  align-self: center;
+}
+
+.report-timeline {
+  margin-bottom: 11px;
+}
+
+.report-timeline span {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.report-timeline p {
+  margin: 4px 0 0;
+  line-height: 1.55;
+}
+
+.report-day-cost {
+  margin: 12px 0 0;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.report-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.report-list {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  background: #ffffff;
+  page-break-inside: avoid;
+}
+
+.report-list h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.report-list p {
+  margin: 7px 0;
+  line-height: 1.45;
+}
+
+.report-budget {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.report-budget-row,
+.report-budget-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.report-budget-row:nth-child(even) {
+  background: #f8fafc;
+}
+
+.report-budget-total {
+  background: #172033;
+}
+
+.report-budget-total,
+.report-budget-total * {
+  color: white;
+}
+
+.report-footer {
+  margin-top: 34px;
+  border-top: 2px solid #e5e7eb;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+}
+
+
+/* PDF overflow fixes */
+.travel-report-hidden {
+  width: 760px !important;
+  max-width: 760px !important;
+  overflow: hidden !important;
+}
+
+.travel-report {
+  width: 760px !important;
+  max-width: 760px !important;
+  padding: 28px !important;
+  overflow: hidden !important;
+}
+
+.travel-report,
+.travel-report * {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+}
+
+.report-cover {
+  min-height: 430px !important;
+  margin-bottom: 24px !important;
+}
+
+.report-cover-content {
+  left: 30px !important;
+  right: 30px !important;
+  bottom: 30px !important;
+}
+
+.report-cover h1 {
+  font-size: 42px !important;
+  line-height: 1.05 !important;
+}
+
+.report-route {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+}
+
+.report-section {
+  margin-bottom: 22px !important;
+  page-break-inside: auto !important;
+  break-inside: auto !important;
+}
+
+.report-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.report-stat {
+  min-width: 0 !important;
+  padding: 11px !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.report-stat strong {
+  display: block !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+.report-forecast {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.report-columns {
+  grid-template-columns: 1fr !important;
+}
+
+.report-day-card,
+.report-list,
+.report-budget {
+  page-break-inside: auto !important;
+  break-inside: auto !important;
+}
+
+.report-day-header {
+  align-items: flex-start !important;
+  flex-wrap: wrap !important;
+}
+
+.report-timeline p,
+.report-list p,
+.report-summary-box p,
+.report-note,
+.report-day-cost {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+.report-budget-row,
+.report-budget-total {
+  align-items: flex-start !important;
+}
+
+.report-budget-row span,
+.report-budget-total span {
+  flex: 0 0 48% !important;
+}
+
+.report-budget-row strong,
+.report-budget-total strong {
+  flex: 1 !important;
+}
+
+.report-footer {
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+.report-section {
+  page-break-before: always;
+  break-before: page;
+  margin-bottom: 30px;
+}
+
+.report-cover + .report-section {
+  page-break-before: auto;
+  break-before: auto;
+}
+
+.report-section-title {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.report-day-card,
+.report-list,
+.report-budget {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
